@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8cbc2173e90a4db5ac72c726af8768f5" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.AREA" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CONTRATO" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DEPARTAMENTO" Width="1.5" PointX="1.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DET_EMPRESA" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EMPRESA" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FUNCIONARIO" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ORDEN" Width="1.5" PointX="8.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ROL" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SECCION" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SUBDEPTO" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TAR_FUNC" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TAREA" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TAREA_AREA" Width="1.5" PointX="8.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TIPO_US" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.USU" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.ORDEN_AREA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.TAREA_AREA_AREA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.CONTRATO_EMPRESA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SECCION_DEPARTAMENTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.DET_EMPRESA_EMPRESA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.DET_EMPRESA_SECCION_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FUNCIONARIO_EMPRESA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.USU_EMPRESA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ORDEN_FUNCIONARIO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.TAR_FUNC_FUNCIONARIO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SECCION_SUBDEPARTAMENTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.TAR_FUNC_TAREA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.TAREA_AREA_TAREA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.TIPO_US_USU_FK" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

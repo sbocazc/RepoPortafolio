@@ -1,0 +1,35 @@
+﻿<Window x:Class="wpf_vista.Menu_funcionario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_vista"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="White"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        Title="Menu_funcionario" Height="375" Width="520.744">
+    <Grid HorizontalAlignment="Left" Width="511">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btn_crear_tarea" Content="Crear tareas" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" Width="188" Height="58" Click="Btn_crear_tarea_Click"/>
+        <Button x:Name="btn_crear_subordi" Content="Crear tarea subordinada" HorizontalAlignment="Left" Margin="25,165,0,0" VerticalAlignment="Top" Width="188" Height="62" Click="Btn_crear_subordi_Click"/>
+        <Button x:Name="btn_asi_responsable" Content="Visualizar tareas" HorizontalAlignment="Left" Margin="131,255,0,0" VerticalAlignment="Top" Width="188" Height="60" Click="Btn_asi_responsable_Click"/>
+        <Button x:Name="btn_reasignar" Content="Reasignar tarea" HorizontalAlignment="Left" Margin="250,165,0,0" VerticalAlignment="Top" Width="188" Height="62" Grid.ColumnSpan="2" Click="Btn_reasignar_Click"/>
+        <Button x:Name="btn_ejecutar_flujo" Content="Ejecutar flujo" HorizontalAlignment="Left" Margin="250,76,0,0" VerticalAlignment="Top" Width="188" Height="62" Grid.ColumnSpan="2" Click="Btn_ejecutar_flujo_Click"/>
+        <Button x:Name="btn_salir" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="107" Grid.Column="1" Height="51" Click="Btn_salir_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Image x:Name="img_volver" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="40" Source="/fotos/atras.png"/>
+        </Button>
+        <Image Margin="0,0,320,276" Source="67eacb4a-76bb-4bf7-9512-da44b221230b.jpg" Stretch="Fill"/>
+
+    </Grid>
+</Window>

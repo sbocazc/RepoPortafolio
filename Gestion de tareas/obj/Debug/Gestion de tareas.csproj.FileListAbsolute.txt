@@ -1,0 +1,17 @@
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\bin\Debug\Gestion de tareas.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\bin\Debug\Gestion de tareas.pdb
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\bin\Debug\MetroFramework.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.csproj.AssemblyReference.cache
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.csproj.CoreCompileInputs.cache
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.csproj.CopyComplete
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\Gestion de tareas\bin\Debug\Gestion de tareas.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\Gestion de tareas\bin\Debug\Gestion de tareas.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\Gestion de tareas\bin\Debug\MetroFramework.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\Gestion de tareas\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\source\repos\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.csproj.CopyComplete
+C:\Users\Alejandro\source\repos\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\Gestion de tareas\obj\Debug\Gestion de tareas.pdb

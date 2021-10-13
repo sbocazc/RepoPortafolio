@@ -1,0 +1,1037 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AREA">
+          <Key>
+            <PropertyRef Name="ID_AREA" />
+          </Key>
+          <Property Name="ID_AREA" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar2" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CONTRATO">
+          <Key>
+            <PropertyRef Name="ID_CONTRATO" />
+          </Key>
+          <Property Name="ID_CONTRATO" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="FECHA_CREACION" Type="date" Nullable="false" />
+          <Property Name="DESCRIPCION_CONTRATO" Type="nvarchar2" MaxLength="150" Nullable="false" />
+          <Property Name="FECHA_INICIO" Type="date" Nullable="false" />
+          <Property Name="FECHA_TERMINO" Type="date" Nullable="false" />
+          <Property Name="EMPRESA_ID_EMPRESA" Type="number" Precision="5" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DEPARTAMENTO">
+          <Key>
+            <PropertyRef Name="ID_DEPARTAMENTO" />
+          </Key>
+          <Property Name="ID_DEPARTAMENTO" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_DEPARTAMENTO" Type="varchar2" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DET_EMPRESA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar2" MaxLength="11" Nullable="false" />
+          <Property Name="EMPRESA_ID_EMPRESA" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="SECCION_ID_SECCION" Type="number" Precision="5" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_EMPRESA" Type="nvarchar2" MaxLength="100" Nullable="false" />
+          <Property Name="RAZON_SOCIAL" Type="varchar2" MaxLength="100" Nullable="false" />
+          <Property Name="RUN_CLIENTE" Type="number" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="DV_CLIENTE" Type="number" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="PRIMER_NOMBRE" Type="nvarchar2" MaxLength="60" Nullable="false" />
+          <Property Name="SEGUNDO_NOMBRE" Type="nvarchar2" MaxLength="60" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="nvarchar2" MaxLength="60" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="nvarchar2" MaxLength="60" Nullable="false" />
+          <Property Name="EMAIL" Type="nvarchar2" MaxLength="60" Nullable="false" />
+          <Property Name="NUMERO_CELULAR" Type="number" Precision="10" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FUNCIONARIO">
+          <Key>
+            <PropertyRef Name="ID_FUNCIONARIO" />
+          </Key>
+          <Property Name="ID_FUNCIONARIO" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar2" MaxLength="200" Nullable="false" />
+          <Property Name="EMAIL" Type="nvarchar2" MaxLength="200" Nullable="false" />
+          <Property Name="EMPRESA_ID_EMPRESA" Type="number" Precision="5" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ORDEN">
+          <Key>
+            <PropertyRef Name="ID_ORDEN" />
+          </Key>
+          <Property Name="ID_ORDEN" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="TAREA" Type="nvarchar2" MaxLength="100" Nullable="false" />
+          <Property Name="NOTA" Type="nclob" Nullable="false" />
+          <Property Name="ESTADO" Type="nvarchar2" MaxLength="200" Nullable="false" />
+          <Property Name="FUNCIONARIO_ID_FUNCIONARIO" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="AREA_ID_AREA" Type="number" Precision="11" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="ID_ROL" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_FUNCIONARIO" Type="varchar2" MaxLength="100" Nullable="false" />
+          <Property Name="RUT_FUNCIONARIO" Type="varchar2" MaxLength="12" Nullable="false" />
+          <Property Name="ROL" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CORREO" Type="varchar2" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SECCION">
+          <Key>
+            <PropertyRef Name="ID_SECCION" />
+          </Key>
+          <Property Name="ID_SECCION" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_SECCION" Type="nvarchar2" MaxLength="60" Nullable="false" />
+          <Property Name="DEPARTAMENTO_ID_DEPARTAMENTO" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="SUBDEPARTAMENTO_ID_SUBDEPTO" Type="number" Precision="5" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SUBDEPTO">
+          <Key>
+            <PropertyRef Name="ID_SUBDEPTO" />
+          </Key>
+          <Property Name="ID_SUBDEPTO" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="NOM_SUBDEPTO" Type="nvarchar2" MaxLength="60" Nullable="false" />
+          <Property Name="ID_SECCION" Type="number" Precision="5" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TAR_FUNC">
+          <Key>
+            <PropertyRef Name="ID_TAREA_FUNCIONARIO" />
+          </Key>
+          <Property Name="ID_TAREA_FUNCIONARIO" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="TAREA_ID_TAREA" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="FUNCIONARIO_ID_FUNCIONARIO" Type="number" Precision="11" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TAREA">
+          <Key>
+            <PropertyRef Name="ID_TAREA" />
+          </Key>
+          <Property Name="ID_TAREA" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_TAREA" Type="varchar2" MaxLength="100" Nullable="false" />
+          <Property Name="DESCRIPCION_TAREA" Type="varchar2" MaxLength="100" />
+          <Property Name="FECHA_INI" Type="date" Nullable="false" />
+          <Property Name="FECHA_TER" Type="date" Nullable="false" />
+          <Property Name="PRIORIDAD" Type="nvarchar2" MaxLength="200" Nullable="false" />
+          <Property Name="NOMBRE_RESPONSABLE" Type="varchar2" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TAREA_AREA">
+          <Key>
+            <PropertyRef Name="ID_TAREA_AREA" />
+          </Key>
+          <Property Name="ID_TAREA_AREA" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="AREA_ID_AREA" Type="number" Precision="11" Scale="0" Nullable="false" />
+          <Property Name="TAREA_ID_TAREA" Type="number" Precision="11" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TIPO_US">
+          <Key>
+            <PropertyRef Name="ID_TIPO_USUARIO" />
+          </Key>
+          <Property Name="ID_TIPO_USUARIO" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="DESC_TIPO" Type="nvarchar2" MaxLength="60" Nullable="false" />
+          <Property Name="USU_ID_USUARIO" Type="number" Precision="5" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USU">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_USUARIO" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CONTRASENA" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="EMPRESA_ID_EMPRESA" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="TIPO_USUARIO" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="CONTRATO_EMPRESA_FK">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="CONTRATO" Type="Self.CONTRATO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="CONTRATO">
+              <PropertyRef Name="EMPRESA_ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DET_EMPRESA_EMPRESA_FK">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="DET_EMPRESA" Type="Self.DET_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="DET_EMPRESA">
+              <PropertyRef Name="EMPRESA_ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DET_EMPRESA_SECCION_FK">
+          <End Role="SECCION" Type="Self.SECCION" Multiplicity="1" />
+          <End Role="DET_EMPRESA" Type="Self.DET_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SECCION">
+              <PropertyRef Name="ID_SECCION" />
+            </Principal>
+            <Dependent Role="DET_EMPRESA">
+              <PropertyRef Name="SECCION_ID_SECCION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FUNCIONARIO_EMPRESA_FK">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="FUNCIONARIO">
+              <PropertyRef Name="EMPRESA_ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ORDEN_AREA_FK">
+          <End Role="AREA" Type="Self.AREA" Multiplicity="1" />
+          <End Role="ORDEN" Type="Self.ORDEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AREA">
+              <PropertyRef Name="ID_AREA" />
+            </Principal>
+            <Dependent Role="ORDEN">
+              <PropertyRef Name="AREA_ID_AREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ORDEN_FUNCIONARIO_FK">
+          <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="1" />
+          <End Role="ORDEN" Type="Self.ORDEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONARIO">
+              <PropertyRef Name="ID_FUNCIONARIO" />
+            </Principal>
+            <Dependent Role="ORDEN">
+              <PropertyRef Name="FUNCIONARIO_ID_FUNCIONARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SECCION_DEPARTAMENTO_FK">
+          <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="1" />
+          <End Role="SECCION" Type="Self.SECCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTAMENTO">
+              <PropertyRef Name="ID_DEPARTAMENTO" />
+            </Principal>
+            <Dependent Role="SECCION">
+              <PropertyRef Name="DEPARTAMENTO_ID_DEPARTAMENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SECCION_SUBDEPARTAMENTO_FK">
+          <End Role="SUBDEPTO" Type="Self.SUBDEPTO" Multiplicity="1" />
+          <End Role="SECCION" Type="Self.SECCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUBDEPTO">
+              <PropertyRef Name="ID_SUBDEPTO" />
+            </Principal>
+            <Dependent Role="SECCION">
+              <PropertyRef Name="SUBDEPARTAMENTO_ID_SUBDEPTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TAR_FUNC_FUNCIONARIO_FK">
+          <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="1" />
+          <End Role="TAR_FUNC" Type="Self.TAR_FUNC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONARIO">
+              <PropertyRef Name="ID_FUNCIONARIO" />
+            </Principal>
+            <Dependent Role="TAR_FUNC">
+              <PropertyRef Name="FUNCIONARIO_ID_FUNCIONARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TAR_FUNC_TAREA_FK">
+          <End Role="TAREA" Type="Self.TAREA" Multiplicity="1" />
+          <End Role="TAR_FUNC" Type="Self.TAR_FUNC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TAREA">
+              <PropertyRef Name="ID_TAREA" />
+            </Principal>
+            <Dependent Role="TAR_FUNC">
+              <PropertyRef Name="TAREA_ID_TAREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TAREA_AREA_AREA_FK">
+          <End Role="AREA" Type="Self.AREA" Multiplicity="1" />
+          <End Role="TAREA_AREA" Type="Self.TAREA_AREA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AREA">
+              <PropertyRef Name="ID_AREA" />
+            </Principal>
+            <Dependent Role="TAREA_AREA">
+              <PropertyRef Name="AREA_ID_AREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TAREA_AREA_TAREA_FK">
+          <End Role="TAREA" Type="Self.TAREA" Multiplicity="1" />
+          <End Role="TAREA_AREA" Type="Self.TAREA_AREA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TAREA">
+              <PropertyRef Name="ID_TAREA" />
+            </Principal>
+            <Dependent Role="TAREA_AREA">
+              <PropertyRef Name="TAREA_ID_TAREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TIPO_US_USU_FK">
+          <End Role="USU" Type="Self.USU" Multiplicity="1" />
+          <End Role="TIPO_US" Type="Self.TIPO_US" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USU">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="TIPO_US">
+              <PropertyRef Name="USU_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USU_EMPRESA_FK">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="USU" Type="Self.USU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="USU">
+              <PropertyRef Name="EMPRESA_ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="SP_AGREGAR_ROL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PORTAFOLIO">
+          <Parameter Name="NOMBRE_FUNCIONARIO" Type="varchar2" Mode="In" />
+          <Parameter Name="RUT_FUNCIONARIO" Type="varchar2" Mode="In" />
+          <Parameter Name="ROL" Type="varchar2" Mode="In" />
+          <Parameter Name="CORREO" Type="varchar2" Mode="In" />
+        </Function>
+        <Function Name="SP_AGREGAR_TAREA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PORTAFOLIO">
+          <Parameter Name="PRIORIDAD" Type="varchar2" Mode="In" />
+          <Parameter Name="NOMBRE_TAREA" Type="varchar2" Mode="In" />
+          <Parameter Name="DESCRIPCION_TAREA" Type="varchar2" Mode="In" />
+          <Parameter Name="FECHA_INI" Type="date" Mode="In" />
+          <Parameter Name="FECHA_TER" Type="date" Mode="In" />
+          <Parameter Name="NOMBRE_RESPONSABLE" Type="varchar2" Mode="In" />
+        </Function>
+        <Function Name="SP_AGREGAR_USU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PORTAFOLIO">
+          <Parameter Name="NOMBRE_USUARIO" Type="varchar2" Mode="In" />
+          <Parameter Name="CONTRASENA" Type="number" Mode="In" />
+          <Parameter Name="TIPO_USUARIO" Type="number" Mode="In" />
+        </Function>
+        <Function Name="SP_LISTAR_TAREA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PORTAFOLIO" />
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="AREA" EntityType="Self.AREA" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="CONTRATO" EntityType="Self.CONTRATO" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="DEPARTAMENTO" EntityType="Self.DEPARTAMENTO" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="DET_EMPRESA" EntityType="Self.DET_EMPRESA" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="ORDEN" EntityType="Self.ORDEN" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="SECCION" EntityType="Self.SECCION" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="SUBDEPTO" EntityType="Self.SUBDEPTO" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="TAR_FUNC" EntityType="Self.TAR_FUNC" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="TAREA" EntityType="Self.TAREA" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="TAREA_AREA" EntityType="Self.TAREA_AREA" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="TIPO_US" EntityType="Self.TIPO_US" Schema="PORTAFOLIO" store:Type="Tables" />
+          <EntitySet Name="USU" EntityType="Self.USU" Schema="PORTAFOLIO" store:Type="Tables" />
+          <AssociationSet Name="CONTRATO_EMPRESA_FK" Association="Self.CONTRATO_EMPRESA_FK">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="CONTRATO" EntitySet="CONTRATO" />
+          </AssociationSet>
+          <AssociationSet Name="DET_EMPRESA_EMPRESA_FK" Association="Self.DET_EMPRESA_EMPRESA_FK">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="DET_EMPRESA" EntitySet="DET_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="DET_EMPRESA_SECCION_FK" Association="Self.DET_EMPRESA_SECCION_FK">
+            <End Role="SECCION" EntitySet="SECCION" />
+            <End Role="DET_EMPRESA" EntitySet="DET_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FUNCIONARIO_EMPRESA_FK" Association="Self.FUNCIONARIO_EMPRESA_FK">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+          </AssociationSet>
+          <AssociationSet Name="ORDEN_AREA_FK" Association="Self.ORDEN_AREA_FK">
+            <End Role="AREA" EntitySet="AREA" />
+            <End Role="ORDEN" EntitySet="ORDEN" />
+          </AssociationSet>
+          <AssociationSet Name="ORDEN_FUNCIONARIO_FK" Association="Self.ORDEN_FUNCIONARIO_FK">
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+            <End Role="ORDEN" EntitySet="ORDEN" />
+          </AssociationSet>
+          <AssociationSet Name="SECCION_DEPARTAMENTO_FK" Association="Self.SECCION_DEPARTAMENTO_FK">
+            <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+            <End Role="SECCION" EntitySet="SECCION" />
+          </AssociationSet>
+          <AssociationSet Name="SECCION_SUBDEPARTAMENTO_FK" Association="Self.SECCION_SUBDEPARTAMENTO_FK">
+            <End Role="SUBDEPTO" EntitySet="SUBDEPTO" />
+            <End Role="SECCION" EntitySet="SECCION" />
+          </AssociationSet>
+          <AssociationSet Name="TAR_FUNC_FUNCIONARIO_FK" Association="Self.TAR_FUNC_FUNCIONARIO_FK">
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+            <End Role="TAR_FUNC" EntitySet="TAR_FUNC" />
+          </AssociationSet>
+          <AssociationSet Name="TAR_FUNC_TAREA_FK" Association="Self.TAR_FUNC_TAREA_FK">
+            <End Role="TAREA" EntitySet="TAREA" />
+            <End Role="TAR_FUNC" EntitySet="TAR_FUNC" />
+          </AssociationSet>
+          <AssociationSet Name="TAREA_AREA_AREA_FK" Association="Self.TAREA_AREA_AREA_FK">
+            <End Role="AREA" EntitySet="AREA" />
+            <End Role="TAREA_AREA" EntitySet="TAREA_AREA" />
+          </AssociationSet>
+          <AssociationSet Name="TAREA_AREA_TAREA_FK" Association="Self.TAREA_AREA_TAREA_FK">
+            <End Role="TAREA" EntitySet="TAREA" />
+            <End Role="TAREA_AREA" EntitySet="TAREA_AREA" />
+          </AssociationSet>
+          <AssociationSet Name="TIPO_US_USU_FK" Association="Self.TIPO_US_USU_FK">
+            <End Role="USU" EntitySet="USU" />
+            <End Role="TIPO_US" EntitySet="TIPO_US" />
+          </AssociationSet>
+          <AssociationSet Name="USU_EMPRESA_FK" Association="Self.USU_EMPRESA_FK">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="USU" EntitySet="USU" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AREA">
+          <Key>
+            <PropertyRef Name="ID_AREA" />
+          </Key>
+          <Property Name="ID_AREA" Type="Int64" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ORDEN" Relationship="Self.ORDEN_AREA_FK" FromRole="AREA" ToRole="ORDEN" />
+          <NavigationProperty Name="TAREA_AREA" Relationship="Self.TAREA_AREA_AREA_FK" FromRole="AREA" ToRole="TAREA_AREA" />
+        </EntityType>
+        <EntityType Name="CONTRATO">
+          <Key>
+            <PropertyRef Name="ID_CONTRATO" />
+          </Key>
+          <Property Name="ID_CONTRATO" Type="Int16" Nullable="false" />
+          <Property Name="FECHA_CREACION" Type="DateTime" Nullable="false" />
+          <Property Name="DESCRIPCION_CONTRATO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FECHA_INICIO" Type="DateTime" Nullable="false" />
+          <Property Name="FECHA_TERMINO" Type="DateTime" Nullable="false" />
+          <Property Name="EMPRESA_ID_EMPRESA" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.CONTRATO_EMPRESA_FK" FromRole="CONTRATO" ToRole="EMPRESA" />
+        </EntityType>
+        <EntityType Name="DEPARTAMENTO">
+          <Key>
+            <PropertyRef Name="ID_DEPARTAMENTO" />
+          </Key>
+          <Property Name="ID_DEPARTAMENTO" Type="Int16" Nullable="false" />
+          <Property Name="NOMBRE_DEPARTAMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="SECCION" Relationship="Self.SECCION_DEPARTAMENTO_FK" FromRole="DEPARTAMENTO" ToRole="SECCION" />
+        </EntityType>
+        <EntityType Name="DET_EMPRESA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMPRESA_ID_EMPRESA" Type="Int16" Nullable="false" />
+          <Property Name="SECCION_ID_SECCION" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.DET_EMPRESA_EMPRESA_FK" FromRole="DET_EMPRESA" ToRole="EMPRESA" />
+          <NavigationProperty Name="SECCION" Relationship="Self.DET_EMPRESA_SECCION_FK" FromRole="DET_EMPRESA" ToRole="SECCION" />
+        </EntityType>
+        <EntityType Name="EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="Int16" Nullable="false" />
+          <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RAZON_SOCIAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUN_CLIENTE" Type="Int32" Nullable="false" />
+          <Property Name="DV_CLIENTE" Type="Int32" Nullable="false" />
+          <Property Name="PRIMER_NOMBRE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SEGUNDO_NOMBRE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NUMERO_CELULAR" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CONTRATO" Relationship="Self.CONTRATO_EMPRESA_FK" FromRole="EMPRESA" ToRole="CONTRATO" />
+          <NavigationProperty Name="DET_EMPRESA" Relationship="Self.DET_EMPRESA_EMPRESA_FK" FromRole="EMPRESA" ToRole="DET_EMPRESA" />
+          <NavigationProperty Name="FUNCIONARIO" Relationship="Self.FUNCIONARIO_EMPRESA_FK" FromRole="EMPRESA" ToRole="FUNCIONARIO" />
+          <NavigationProperty Name="USU" Relationship="Self.USU_EMPRESA_FK" FromRole="EMPRESA" ToRole="USU" />
+        </EntityType>
+        <EntityType Name="FUNCIONARIO">
+          <Key>
+            <PropertyRef Name="ID_FUNCIONARIO" />
+          </Key>
+          <Property Name="ID_FUNCIONARIO" Type="Int64" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMPRESA_ID_EMPRESA" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FUNCIONARIO_EMPRESA_FK" FromRole="FUNCIONARIO" ToRole="EMPRESA" />
+          <NavigationProperty Name="ORDEN" Relationship="Self.ORDEN_FUNCIONARIO_FK" FromRole="FUNCIONARIO" ToRole="ORDEN" />
+          <NavigationProperty Name="TAR_FUNC" Relationship="Self.TAR_FUNC_FUNCIONARIO_FK" FromRole="FUNCIONARIO" ToRole="TAR_FUNC" />
+        </EntityType>
+        <EntityType Name="ORDEN">
+          <Key>
+            <PropertyRef Name="ID_ORDEN" />
+          </Key>
+          <Property Name="ID_ORDEN" Type="Int64" Nullable="false" />
+          <Property Name="TAREA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FUNCIONARIO_ID_FUNCIONARIO" Type="Int64" Nullable="false" />
+          <Property Name="AREA_ID_AREA" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="AREA" Relationship="Self.ORDEN_AREA_FK" FromRole="ORDEN" ToRole="AREA" />
+          <NavigationProperty Name="FUNCIONARIO" Relationship="Self.ORDEN_FUNCIONARIO_FK" FromRole="ORDEN" ToRole="FUNCIONARIO" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="ID_ROL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_FUNCIONARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUT_FUNCIONARIO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CORREO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SECCION">
+          <Key>
+            <PropertyRef Name="ID_SECCION" />
+          </Key>
+          <Property Name="ID_SECCION" Type="Int16" Nullable="false" />
+          <Property Name="NOMBRE_SECCION" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DEPARTAMENTO_ID_DEPARTAMENTO" Type="Int16" Nullable="false" />
+          <Property Name="SUBDEPARTAMENTO_ID_SUBDEPTO" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="DEPARTAMENTO" Relationship="Self.SECCION_DEPARTAMENTO_FK" FromRole="SECCION" ToRole="DEPARTAMENTO" />
+          <NavigationProperty Name="DET_EMPRESA" Relationship="Self.DET_EMPRESA_SECCION_FK" FromRole="SECCION" ToRole="DET_EMPRESA" />
+          <NavigationProperty Name="SUBDEPTO" Relationship="Self.SECCION_SUBDEPARTAMENTO_FK" FromRole="SECCION" ToRole="SUBDEPTO" />
+        </EntityType>
+        <EntityType Name="SUBDEPTO">
+          <Key>
+            <PropertyRef Name="ID_SUBDEPTO" />
+          </Key>
+          <Property Name="ID_SUBDEPTO" Type="Int16" Nullable="false" />
+          <Property Name="NOM_SUBDEPTO" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_SECCION" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SECCION" Relationship="Self.SECCION_SUBDEPARTAMENTO_FK" FromRole="SUBDEPTO" ToRole="SECCION" />
+        </EntityType>
+        <EntityType Name="TAR_FUNC">
+          <Key>
+            <PropertyRef Name="ID_TAREA_FUNCIONARIO" />
+          </Key>
+          <Property Name="ID_TAREA_FUNCIONARIO" Type="Int64" Nullable="false" />
+          <Property Name="TAREA_ID_TAREA" Type="Int64" Nullable="false" />
+          <Property Name="FUNCIONARIO_ID_FUNCIONARIO" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="FUNCIONARIO" Relationship="Self.TAR_FUNC_FUNCIONARIO_FK" FromRole="TAR_FUNC" ToRole="FUNCIONARIO" />
+          <NavigationProperty Name="TAREA" Relationship="Self.TAR_FUNC_TAREA_FK" FromRole="TAR_FUNC" ToRole="TAREA" />
+        </EntityType>
+        <EntityType Name="TAREA">
+          <Key>
+            <PropertyRef Name="ID_TAREA" />
+          </Key>
+          <Property Name="ID_TAREA" Type="Int64" Nullable="false" />
+          <Property Name="NOMBRE_TAREA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION_TAREA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_INI" Type="DateTime" Nullable="false" />
+          <Property Name="FECHA_TER" Type="DateTime" Nullable="false" />
+          <Property Name="PRIORIDAD" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NOMBRE_RESPONSABLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TAR_FUNC" Relationship="Self.TAR_FUNC_TAREA_FK" FromRole="TAREA" ToRole="TAR_FUNC" />
+          <NavigationProperty Name="TAREA_AREA" Relationship="Self.TAREA_AREA_TAREA_FK" FromRole="TAREA" ToRole="TAREA_AREA" />
+        </EntityType>
+        <EntityType Name="TAREA_AREA">
+          <Key>
+            <PropertyRef Name="ID_TAREA_AREA" />
+          </Key>
+          <Property Name="ID_TAREA_AREA" Type="Int64" Nullable="false" />
+          <Property Name="AREA_ID_AREA" Type="Int64" Nullable="false" />
+          <Property Name="TAREA_ID_TAREA" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="AREA" Relationship="Self.TAREA_AREA_AREA_FK" FromRole="TAREA_AREA" ToRole="AREA" />
+          <NavigationProperty Name="TAREA" Relationship="Self.TAREA_AREA_TAREA_FK" FromRole="TAREA_AREA" ToRole="TAREA" />
+        </EntityType>
+        <EntityType Name="TIPO_US">
+          <Key>
+            <PropertyRef Name="ID_TIPO_USUARIO" />
+          </Key>
+          <Property Name="ID_TIPO_USUARIO" Type="Int16" Nullable="false" />
+          <Property Name="DESC_TIPO" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="USU_ID_USUARIO" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="USU" Relationship="Self.TIPO_US_USU_FK" FromRole="TIPO_US" ToRole="USU" />
+        </EntityType>
+        <EntityType Name="USU">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="Int16" Nullable="false" />
+          <Property Name="NOMBRE_USUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CONTRASENA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMPRESA_ID_EMPRESA" Type="Int16" Nullable="false" />
+          <Property Name="TIPO_USUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.USU_EMPRESA_FK" FromRole="USU" ToRole="EMPRESA" />
+          <NavigationProperty Name="TIPO_US" Relationship="Self.TIPO_US_USU_FK" FromRole="USU" ToRole="TIPO_US" />
+        </EntityType>
+        <Association Name="ORDEN_AREA_FK">
+          <End Role="AREA" Type="Self.AREA" Multiplicity="1" />
+          <End Role="ORDEN" Type="Self.ORDEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AREA">
+              <PropertyRef Name="ID_AREA" />
+            </Principal>
+            <Dependent Role="ORDEN">
+              <PropertyRef Name="AREA_ID_AREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TAREA_AREA_AREA_FK">
+          <End Role="AREA" Type="Self.AREA" Multiplicity="1" />
+          <End Role="TAREA_AREA" Type="Self.TAREA_AREA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AREA">
+              <PropertyRef Name="ID_AREA" />
+            </Principal>
+            <Dependent Role="TAREA_AREA">
+              <PropertyRef Name="AREA_ID_AREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CONTRATO_EMPRESA_FK">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="CONTRATO" Type="Self.CONTRATO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="CONTRATO">
+              <PropertyRef Name="EMPRESA_ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SECCION_DEPARTAMENTO_FK">
+          <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="1" />
+          <End Role="SECCION" Type="Self.SECCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTAMENTO">
+              <PropertyRef Name="ID_DEPARTAMENTO" />
+            </Principal>
+            <Dependent Role="SECCION">
+              <PropertyRef Name="DEPARTAMENTO_ID_DEPARTAMENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DET_EMPRESA_EMPRESA_FK">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="DET_EMPRESA" Type="Self.DET_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="DET_EMPRESA">
+              <PropertyRef Name="EMPRESA_ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DET_EMPRESA_SECCION_FK">
+          <End Role="SECCION" Type="Self.SECCION" Multiplicity="1" />
+          <End Role="DET_EMPRESA" Type="Self.DET_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SECCION">
+              <PropertyRef Name="ID_SECCION" />
+            </Principal>
+            <Dependent Role="DET_EMPRESA">
+              <PropertyRef Name="SECCION_ID_SECCION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FUNCIONARIO_EMPRESA_FK">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="FUNCIONARIO">
+              <PropertyRef Name="EMPRESA_ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USU_EMPRESA_FK">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="USU" Type="Self.USU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="USU">
+              <PropertyRef Name="EMPRESA_ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ORDEN_FUNCIONARIO_FK">
+          <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="1" />
+          <End Role="ORDEN" Type="Self.ORDEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONARIO">
+              <PropertyRef Name="ID_FUNCIONARIO" />
+            </Principal>
+            <Dependent Role="ORDEN">
+              <PropertyRef Name="FUNCIONARIO_ID_FUNCIONARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TAR_FUNC_FUNCIONARIO_FK">
+          <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="1" />
+          <End Role="TAR_FUNC" Type="Self.TAR_FUNC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONARIO">
+              <PropertyRef Name="ID_FUNCIONARIO" />
+            </Principal>
+            <Dependent Role="TAR_FUNC">
+              <PropertyRef Name="FUNCIONARIO_ID_FUNCIONARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SECCION_SUBDEPARTAMENTO_FK">
+          <End Role="SUBDEPTO" Type="Self.SUBDEPTO" Multiplicity="1" />
+          <End Role="SECCION" Type="Self.SECCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUBDEPTO">
+              <PropertyRef Name="ID_SUBDEPTO" />
+            </Principal>
+            <Dependent Role="SECCION">
+              <PropertyRef Name="SUBDEPARTAMENTO_ID_SUBDEPTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TAR_FUNC_TAREA_FK">
+          <End Role="TAREA" Type="Self.TAREA" Multiplicity="1" />
+          <End Role="TAR_FUNC" Type="Self.TAR_FUNC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TAREA">
+              <PropertyRef Name="ID_TAREA" />
+            </Principal>
+            <Dependent Role="TAR_FUNC">
+              <PropertyRef Name="TAREA_ID_TAREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TAREA_AREA_TAREA_FK">
+          <End Role="TAREA" Type="Self.TAREA" Multiplicity="1" />
+          <End Role="TAREA_AREA" Type="Self.TAREA_AREA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TAREA">
+              <PropertyRef Name="ID_TAREA" />
+            </Principal>
+            <Dependent Role="TAREA_AREA">
+              <PropertyRef Name="TAREA_ID_TAREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TIPO_US_USU_FK">
+          <End Role="USU" Type="Self.USU" Multiplicity="1" />
+          <End Role="TIPO_US" Type="Self.TIPO_US" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USU">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="TIPO_US">
+              <PropertyRef Name="USU_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="portafolio" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AREA" EntityType="Self.AREA" />
+          <EntitySet Name="CONTRATO" EntityType="Self.CONTRATO" />
+          <EntitySet Name="DEPARTAMENTO" EntityType="Self.DEPARTAMENTO" />
+          <EntitySet Name="DET_EMPRESA" EntityType="Self.DET_EMPRESA" />
+          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" />
+          <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" />
+          <EntitySet Name="ORDEN" EntityType="Self.ORDEN" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" />
+          <EntitySet Name="SECCION" EntityType="Self.SECCION" />
+          <EntitySet Name="SUBDEPTO" EntityType="Self.SUBDEPTO" />
+          <EntitySet Name="TAR_FUNC" EntityType="Self.TAR_FUNC" />
+          <EntitySet Name="TAREA" EntityType="Self.TAREA" />
+          <EntitySet Name="TAREA_AREA" EntityType="Self.TAREA_AREA" />
+          <EntitySet Name="TIPO_US" EntityType="Self.TIPO_US" />
+          <EntitySet Name="USU" EntityType="Self.USU" />
+          <AssociationSet Name="ORDEN_AREA_FK" Association="Self.ORDEN_AREA_FK">
+            <End Role="AREA" EntitySet="AREA" />
+            <End Role="ORDEN" EntitySet="ORDEN" />
+          </AssociationSet>
+          <AssociationSet Name="TAREA_AREA_AREA_FK" Association="Self.TAREA_AREA_AREA_FK">
+            <End Role="AREA" EntitySet="AREA" />
+            <End Role="TAREA_AREA" EntitySet="TAREA_AREA" />
+          </AssociationSet>
+          <AssociationSet Name="CONTRATO_EMPRESA_FK" Association="Self.CONTRATO_EMPRESA_FK">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="CONTRATO" EntitySet="CONTRATO" />
+          </AssociationSet>
+          <AssociationSet Name="SECCION_DEPARTAMENTO_FK" Association="Self.SECCION_DEPARTAMENTO_FK">
+            <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+            <End Role="SECCION" EntitySet="SECCION" />
+          </AssociationSet>
+          <AssociationSet Name="DET_EMPRESA_EMPRESA_FK" Association="Self.DET_EMPRESA_EMPRESA_FK">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="DET_EMPRESA" EntitySet="DET_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="DET_EMPRESA_SECCION_FK" Association="Self.DET_EMPRESA_SECCION_FK">
+            <End Role="SECCION" EntitySet="SECCION" />
+            <End Role="DET_EMPRESA" EntitySet="DET_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FUNCIONARIO_EMPRESA_FK" Association="Self.FUNCIONARIO_EMPRESA_FK">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+          </AssociationSet>
+          <AssociationSet Name="USU_EMPRESA_FK" Association="Self.USU_EMPRESA_FK">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="USU" EntitySet="USU" />
+          </AssociationSet>
+          <AssociationSet Name="ORDEN_FUNCIONARIO_FK" Association="Self.ORDEN_FUNCIONARIO_FK">
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+            <End Role="ORDEN" EntitySet="ORDEN" />
+          </AssociationSet>
+          <AssociationSet Name="TAR_FUNC_FUNCIONARIO_FK" Association="Self.TAR_FUNC_FUNCIONARIO_FK">
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+            <End Role="TAR_FUNC" EntitySet="TAR_FUNC" />
+          </AssociationSet>
+          <AssociationSet Name="SECCION_SUBDEPARTAMENTO_FK" Association="Self.SECCION_SUBDEPARTAMENTO_FK">
+            <End Role="SUBDEPTO" EntitySet="SUBDEPTO" />
+            <End Role="SECCION" EntitySet="SECCION" />
+          </AssociationSet>
+          <AssociationSet Name="TAR_FUNC_TAREA_FK" Association="Self.TAR_FUNC_TAREA_FK">
+            <End Role="TAREA" EntitySet="TAREA" />
+            <End Role="TAR_FUNC" EntitySet="TAR_FUNC" />
+          </AssociationSet>
+          <AssociationSet Name="TAREA_AREA_TAREA_FK" Association="Self.TAREA_AREA_TAREA_FK">
+            <End Role="TAREA" EntitySet="TAREA" />
+            <End Role="TAREA_AREA" EntitySet="TAREA_AREA" />
+          </AssociationSet>
+          <AssociationSet Name="TIPO_US_USU_FK" Association="Self.TIPO_US_USU_FK">
+            <End Role="USU" EntitySet="USU" />
+            <End Role="TIPO_US" EntitySet="TIPO_US" />
+          </AssociationSet>
+          <FunctionImport Name="SP_AGREGAR_ROL">
+            <Parameter Name="NOMBRE_FUNCIONARIO" Mode="In" Type="String" />
+            <Parameter Name="RUT_FUNCIONARIO" Mode="In" Type="String" />
+            <Parameter Name="ROL" Mode="In" Type="String" />
+            <Parameter Name="CORREO" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_AGREGAR_TAREA">
+            <Parameter Name="PRIORIDAD" Mode="In" Type="String" />
+            <Parameter Name="NOMBRE_TAREA" Mode="In" Type="String" />
+            <Parameter Name="DESCRIPCION_TAREA" Mode="In" Type="String" />
+            <Parameter Name="FECHA_INI" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_TER" Mode="In" Type="DateTime" />
+            <Parameter Name="NOMBRE_RESPONSABLE" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_AGREGAR_USU">
+            <Parameter Name="NOMBRE_USUARIO" Mode="In" Type="String" />
+            <Parameter Name="CONTRASENA" Mode="In" Type="Decimal" />
+            <Parameter Name="TIPO_USUARIO" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="SP_LISTAR_TAREA" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="portafolio">
+          <EntitySetMapping Name="AREA">
+            <EntityTypeMapping TypeName="Model.AREA">
+              <MappingFragment StoreEntitySet="AREA">
+                <ScalarProperty Name="ID_AREA" ColumnName="ID_AREA" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONTRATO">
+            <EntityTypeMapping TypeName="Model.CONTRATO">
+              <MappingFragment StoreEntitySet="CONTRATO">
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+                <ScalarProperty Name="DESCRIPCION_CONTRATO" ColumnName="DESCRIPCION_CONTRATO" />
+                <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+                <ScalarProperty Name="FECHA_TERMINO" ColumnName="FECHA_TERMINO" />
+                <ScalarProperty Name="EMPRESA_ID_EMPRESA" ColumnName="EMPRESA_ID_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DEPARTAMENTO">
+            <EntityTypeMapping TypeName="Model.DEPARTAMENTO">
+              <MappingFragment StoreEntitySet="DEPARTAMENTO">
+                <ScalarProperty Name="ID_DEPARTAMENTO" ColumnName="ID_DEPARTAMENTO" />
+                <ScalarProperty Name="NOMBRE_DEPARTAMENTO" ColumnName="NOMBRE_DEPARTAMENTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DET_EMPRESA">
+            <EntityTypeMapping TypeName="Model.DET_EMPRESA">
+              <MappingFragment StoreEntitySet="DET_EMPRESA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EMPRESA_ID_EMPRESA" ColumnName="EMPRESA_ID_EMPRESA" />
+                <ScalarProperty Name="SECCION_ID_SECCION" ColumnName="SECCION_ID_SECCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPRESA">
+            <EntityTypeMapping TypeName="Model.EMPRESA">
+              <MappingFragment StoreEntitySet="EMPRESA">
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+                <ScalarProperty Name="RAZON_SOCIAL" ColumnName="RAZON_SOCIAL" />
+                <ScalarProperty Name="RUN_CLIENTE" ColumnName="RUN_CLIENTE" />
+                <ScalarProperty Name="DV_CLIENTE" ColumnName="DV_CLIENTE" />
+                <ScalarProperty Name="PRIMER_NOMBRE" ColumnName="PRIMER_NOMBRE" />
+                <ScalarProperty Name="SEGUNDO_NOMBRE" ColumnName="SEGUNDO_NOMBRE" />
+                <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+                <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="NUMERO_CELULAR" ColumnName="NUMERO_CELULAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUNCIONARIO">
+            <EntityTypeMapping TypeName="Model.FUNCIONARIO">
+              <MappingFragment StoreEntitySet="FUNCIONARIO">
+                <ScalarProperty Name="ID_FUNCIONARIO" ColumnName="ID_FUNCIONARIO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="EMPRESA_ID_EMPRESA" ColumnName="EMPRESA_ID_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORDEN">
+            <EntityTypeMapping TypeName="Model.ORDEN">
+              <MappingFragment StoreEntitySet="ORDEN">
+                <ScalarProperty Name="ID_ORDEN" ColumnName="ID_ORDEN" />
+                <ScalarProperty Name="TAREA" ColumnName="TAREA" />
+                <ScalarProperty Name="NOTA" ColumnName="NOTA" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="FUNCIONARIO_ID_FUNCIONARIO" ColumnName="FUNCIONARIO_ID_FUNCIONARIO" />
+                <ScalarProperty Name="AREA_ID_AREA" ColumnName="AREA_ID_AREA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROL">
+            <EntityTypeMapping TypeName="Model.ROL">
+              <MappingFragment StoreEntitySet="ROL">
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+                <ScalarProperty Name="NOMBRE_FUNCIONARIO" ColumnName="NOMBRE_FUNCIONARIO" />
+                <ScalarProperty Name="RUT_FUNCIONARIO" ColumnName="RUT_FUNCIONARIO" />
+                <ScalarProperty Name="ROL1" ColumnName="ROL" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SECCION">
+            <EntityTypeMapping TypeName="Model.SECCION">
+              <MappingFragment StoreEntitySet="SECCION">
+                <ScalarProperty Name="ID_SECCION" ColumnName="ID_SECCION" />
+                <ScalarProperty Name="NOMBRE_SECCION" ColumnName="NOMBRE_SECCION" />
+                <ScalarProperty Name="DEPARTAMENTO_ID_DEPARTAMENTO" ColumnName="DEPARTAMENTO_ID_DEPARTAMENTO" />
+                <ScalarProperty Name="SUBDEPARTAMENTO_ID_SUBDEPTO" ColumnName="SUBDEPARTAMENTO_ID_SUBDEPTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SUBDEPTO">
+            <EntityTypeMapping TypeName="Model.SUBDEPTO">
+              <MappingFragment StoreEntitySet="SUBDEPTO">
+                <ScalarProperty Name="ID_SUBDEPTO" ColumnName="ID_SUBDEPTO" />
+                <ScalarProperty Name="NOM_SUBDEPTO" ColumnName="NOM_SUBDEPTO" />
+                <ScalarProperty Name="ID_SECCION" ColumnName="ID_SECCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TAR_FUNC">
+            <EntityTypeMapping TypeName="Model.TAR_FUNC">
+              <MappingFragment StoreEntitySet="TAR_FUNC">
+                <ScalarProperty Name="ID_TAREA_FUNCIONARIO" ColumnName="ID_TAREA_FUNCIONARIO" />
+                <ScalarProperty Name="TAREA_ID_TAREA" ColumnName="TAREA_ID_TAREA" />
+                <ScalarProperty Name="FUNCIONARIO_ID_FUNCIONARIO" ColumnName="FUNCIONARIO_ID_FUNCIONARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TAREA">
+            <EntityTypeMapping TypeName="Model.TAREA">
+              <MappingFragment StoreEntitySet="TAREA">
+                <ScalarProperty Name="ID_TAREA" ColumnName="ID_TAREA" />
+                <ScalarProperty Name="NOMBRE_TAREA" ColumnName="NOMBRE_TAREA" />
+                <ScalarProperty Name="DESCRIPCION_TAREA" ColumnName="DESCRIPCION_TAREA" />
+                <ScalarProperty Name="FECHA_INI" ColumnName="FECHA_INI" />
+                <ScalarProperty Name="FECHA_TER" ColumnName="FECHA_TER" />
+                <ScalarProperty Name="PRIORIDAD" ColumnName="PRIORIDAD" />
+                <ScalarProperty Name="NOMBRE_RESPONSABLE" ColumnName="NOMBRE_RESPONSABLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TAREA_AREA">
+            <EntityTypeMapping TypeName="Model.TAREA_AREA">
+              <MappingFragment StoreEntitySet="TAREA_AREA">
+                <ScalarProperty Name="ID_TAREA_AREA" ColumnName="ID_TAREA_AREA" />
+                <ScalarProperty Name="AREA_ID_AREA" ColumnName="AREA_ID_AREA" />
+                <ScalarProperty Name="TAREA_ID_TAREA" ColumnName="TAREA_ID_TAREA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_US">
+            <EntityTypeMapping TypeName="Model.TIPO_US">
+              <MappingFragment StoreEntitySet="TIPO_US">
+                <ScalarProperty Name="ID_TIPO_USUARIO" ColumnName="ID_TIPO_USUARIO" />
+                <ScalarProperty Name="DESC_TIPO" ColumnName="DESC_TIPO" />
+                <ScalarProperty Name="USU_ID_USUARIO" ColumnName="USU_ID_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USU">
+            <EntityTypeMapping TypeName="Model.USU">
+              <MappingFragment StoreEntitySet="USU">
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="NOMBRE_USUARIO" ColumnName="NOMBRE_USUARIO" />
+                <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+                <ScalarProperty Name="EMPRESA_ID_EMPRESA" ColumnName="EMPRESA_ID_EMPRESA" />
+                <ScalarProperty Name="TIPO_USUARIO" ColumnName="TIPO_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_AGREGAR_ROL" FunctionName="Model.Store.SP_AGREGAR_ROL" />
+          <FunctionImportMapping FunctionImportName="SP_AGREGAR_TAREA" FunctionName="Model.Store.SP_AGREGAR_TAREA" />
+          <FunctionImportMapping FunctionImportName="SP_AGREGAR_USU" FunctionName="Model.Store.SP_AGREGAR_USU" />
+          <FunctionImportMapping FunctionImportName="SP_LISTAR_TAREA" FunctionName="Model.Store.SP_LISTAR_TAREA" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

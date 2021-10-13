@@ -1,0 +1,113 @@
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\wpf vista.exe.config
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\wpf vista.exe
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\wpf vista.pdb
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\Gestion de tareas.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignColors.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\Gestion de tareas.pdb
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignColors.pdb
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista.csproj.AssemblyReference.cache
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\agregar_empresa.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Ejecutar_flujo.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Reasignar tarea.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Asignar_responsable.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear roles.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear tarea subordinada.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear tarea.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear unidad interna.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear usuario.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\crear_flujo_tarea.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\MainWindow.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Menu funcionario.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Menu.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\App.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista_MarkupCompile.cache
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista_MarkupCompile.lref
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\App.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\agregar_empresa.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Ejecutar_flujo.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Reasignar tarea.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Asignar_responsable.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear roles.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear tarea subordinada.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear tarea.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear unidad interna.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Crear usuario.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\crear_flujo_tarea.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\MainWindow.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Menu funcionario.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\Menu.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista.g.resources
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf_vista.Properties.Resources.resources
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista.csproj.GenerateResource.cache
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista.csproj.CoreCompileInputs.cache
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista.csproj.CopyComplete
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista.exe
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\wpf vista.pdb
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\ListarTareasUsu.g.cs
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\obj\Debug\ListarTareasUsu.baml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\ControlzEx.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\ControlzEx.pdb
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\ControlzEx.xml
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\FELIPE\Desktop\Proyecto portafolio\Gestion de tareas\wpf vista\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\wpf vista.exe.config
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\wpf vista.exe
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\wpf vista.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\ControlzEx.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\Gestion de tareas.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignColors.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\Gestion de tareas.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\ControlzEx.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\ControlzEx.xml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf vista.csproj.AssemblyReference.cache
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\agregar_empresa.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Ejecutar_flujo.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\ListarTareasUsu.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Reasignar tarea.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Asignar_responsable.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear roles.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear tarea subordinada.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear tarea.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear unidad interna.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear usuario.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\crear_flujo_tarea.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\MainWindow.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Menu funcionario.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Menu.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\App.g.cs
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf vista_MarkupCompile.cache
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf vista_MarkupCompile.lref
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\App.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\agregar_empresa.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Ejecutar_flujo.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\ListarTareasUsu.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Reasignar tarea.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Asignar_responsable.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear roles.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear tarea subordinada.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear tarea.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear unidad interna.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Crear usuario.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\crear_flujo_tarea.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\MainWindow.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Menu funcionario.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\Menu.baml
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf vista.g.resources
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf_vista.Properties.Resources.resources
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf vista.csproj.GenerateResource.cache
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf vista.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf vista.exe
+C:\Users\Alejandro\source\repos\Gestion de tareas\wpf vista\obj\Debug\wpf vista.pdb

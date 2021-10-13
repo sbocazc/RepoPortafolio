@@ -1,0 +1,36 @@
+﻿<Window x:Class="wpf_vista.Crear_unidad_interna"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_vista"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="White"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        Title="Crear_unidad_interna" Height="414" Width="606.5">
+    <Grid>
+        <Grid Height="383" VerticalAlignment="Top">
+            <Label Content="Nombre de unidad de tareas:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Height="29" Width="200"/>
+            <TextBox x:Name="txt_nombre_uni" HorizontalAlignment="Left" Height="23" Margin="210,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <DataGrid HorizontalAlignment="Left" Height="265" Margin="346,49,0,0" VerticalAlignment="Top" Width="242"/>
+            <Button x:Name="btn_crear_uni" HorizontalAlignment="Left" Margin="128,194,0,0" VerticalAlignment="Top" Width="96" Height="74">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Image x:Name="img_crear" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="40" Source="/fotos/crear.png"/>
+            </Button>
+            <Button x:Name="btn_volver" HorizontalAlignment="Left" Margin="514,329,0,0" VerticalAlignment="Top" Width="84" Height="54">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Image x:Name="img_volver" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="40" Source="/fotos/atras.png"/>
+            </Button>
+            <Image Margin="0,0,524,305" Source="67eacb4a-76bb-4bf7-9512-da44b221230b.jpg" Stretch="Fill"/>
+        </Grid>
+
+    </Grid>
+</Window>

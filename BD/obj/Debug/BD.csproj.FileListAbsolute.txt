@@ -1,0 +1,24 @@
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\obj\Debug\BD.csproj.AssemblyReference.cache
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\obj\Debug\BD.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\BD.dll.config
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\BD.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\BD.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\EntityFramework.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\Gestion de tareas.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\wpf vista.exe
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\Gestion de tareas.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\wpf vista.pdb
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\wpf vista.exe.config
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\de\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\it\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\ja\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\ko\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\obj\Debug\BD.csproj.CopyComplete
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\obj\Debug\BD.dll
+C:\Users\Alejandro\source\repos\Gestion de tareas\BD\obj\Debug\BD.pdb
